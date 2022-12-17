@@ -1,0 +1,356 @@
+#search-content {
+
+    z-index: 99;
+
+}
+
+#menu-search-icon {
+
+    transform: translateY(-50%);
+    top: 50%;
+    right: 21px;
+
+}
+
+div.aa-Panel {
+
+    transform: translateY(-53px);
+    padding-top: 60px;
+
+}
+
+section[data-autocomplete-source-id="pages"] {
+
+    li.aa-Item {
+
+        margin-bottom: 0;
+
+        @media all and (max-width: 767px) {
+
+            &:nth-of-type(1n+3) {
+
+                display: none;
+
+            }
+
+        }
+
+    }
+
+}
+
+section[data-autocomplete-source-id="products"] {
+
+    li.aa-Item {
+
+        width: 33.33%;
+
+        @media all and (max-width: 767px) {
+
+            width: 50%;
+
+            &:nth-of-type(1n+5) {
+
+                display: none;
+
+            }
+
+        }
+
+    }
+
+}
+
+section[data-autocomplete-source-id="categories"] {
+
+    li.aa-Item {
+
+        display: inline-block;
+        width: auto;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @media all and (max-width: 767px) {
+
+            &:nth-of-type(1n+4) {
+
+                display: none;
+
+            }
+
+        }
+
+    }
+
+}
+
+section[data-autocomplete-source-id="brand"] {
+
+    ul.aa-List {
+
+        flex-wrap: nowrap;
+
+        @media all and (max-width: 767px) {
+
+            li:nth-of-type(1n+5) {
+
+                display: none;
+
+            }
+
+        }
+
+    }
+
+}
+
+section[data-autocomplete-source-id] {
+
+    ul.aa-List {
+
+        margin: 0;
+
+    }
+
+}
+
+.autocomplete-product-top-container {
+
+    @media all and (max-width: 767px) {
+
+        > div.flex {
+
+            flex-direction: column;
+
+            > div {
+
+                width: 100%;
+
+            }
+
+        }
+
+    }
+
+    &.prescription {
+
+        
+
+    }
+
+}
+
+#algolia-autocomplete-container {
+
+    input.aa-Input {
+
+        &:focus {
+
+            border-color: rgb(255, 79, 4);
+            --tw-ring-color: rgb(255, 79, 4);
+
+        }
+
+    }
+
+}
+
+.navigation {
+
+    @media all and ( max-width: 767px ) {
+
+        z-index: 100!important;
+
+    }
+
+}
+
+.catalogsearch-result-index {
+
+    #instant-search-bar {
+
+        .ais-SearchBox-form {
+
+            @apply relative;
+
+            .ais-SearchBox-input {
+
+                @apply w-full rounded-full;
+    
+            }
+
+            .ais-SearchBox-reset {
+
+                @apply absolute right-4 h-full;
+
+            }
+
+        }
+        
+    }
+
+    #algolia-sorts {
+
+        .ais-SortBy-select {
+
+            @apply rounded-full;
+
+        }
+
+    }
+
+    #instant-search-results-container {
+
+        .ais-Hits-list {
+
+            @apply mx-auto pt-4 pb-12 grid gap-8 sm:grid-cols-2 xl:grid-cols-3;
+
+        }
+
+    }
+
+    #instant-search-facets-container {
+
+        .ais-CurrentRefinements {
+
+            .ais-CurrentRefinements-label {
+
+                display: block;
+
+            }
+
+            .ais-CurrentRefinements-delete {
+
+                @apply ml-2;
+
+            }
+
+        }
+
+        #clear-refinements {
+
+            .ais-ClearRefinements-button {
+
+                @apply font-bold order-2 bg-red-500 p-2 rounded-lg mt-2;
+
+            }
+
+            .ais-ClearRefinements-button--disabled {
+
+                display: none;
+
+            }
+
+        }
+
+        .ais-Panel {
+
+            @apply bg-primary-lighter rounded-lg shadow-xl my-4;
+
+            .ais-Panel-header {
+
+                @apply pt-2 px-4 flex justify-between items-center hover:text-secondary-darker border-container border-b pb-4;
+
+                > span {
+
+                    @apply text-base md:text-lg font-semibold;
+
+                }
+
+            }
+
+            .ais-HierarchicalMenu-list {
+
+                @apply px-4 bg-white pt-3 block;
+
+                .ais-HierarchicalMenu-item {
+
+                    @apply flex justify-between py-1 hover:text-black;
+
+                    > div {
+
+                        @apply w-full;
+
+                        .ais-HierarchicalMenu-link {
+
+                            display: flex;
+                            justify-content: space-between;
+
+                            .cross-circle {
+
+                                display: none;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    #instant-search-pagination-container {
+
+        .ais-Pagination-list {
+
+            @apply flex justify-center flex-wrap;
+
+            .ais-Pagination-item {
+
+                @apply mx-0.5;
+
+            }
+
+            .ais-Pagination-item--previousPage,
+            .ais-Pagination-item--nextPage {
+
+                @apply bg-primary rounded-full px-6 py-2 font-bold;
+
+                @media all and ( max-width: 1023px ) {
+
+                    order: 10;
+                    width: 49%;
+                    text-align: center;
+                    margin-top: 10px;
+
+                }
+
+            }
+
+            .ais-Pagination-item--disabled {
+
+                display: none;
+
+            }
+
+            .ais-Pagination-item--page {
+
+                .ais-Pagination-link {
+
+                    @apply flex items-center border rounded-full py-2 w-9 justify-center hover:bg-gray-200;
+
+                }
+
+            }
+
+            .ais-Pagination-item--selected {
+
+                .ais-Pagination-link {
+
+                    @apply bg-green-200 cursor-not-allowed pointer-events-none;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
